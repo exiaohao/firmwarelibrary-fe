@@ -9,7 +9,7 @@
             :trigger-on-focus="false"
             placeholder="输入关键词/型号进行查询"
             @select="handleSelect"
-            style="width:80%; margin: 20px 0;"
+            style="width:50%; margin: 20px 0;"
           >
           <template #default="{ item }">
             <div class="choices">
@@ -29,9 +29,10 @@
       v-loading="isTableLoading"
       style="width: 100%"
     >
-      <el-table-column prop="Manufacturer" label="厂家" width="180" />
-      <el-table-column prop="Model" label="型号" width="180" />
+      <el-table-column prop="ManufacturerDisplayName" label="厂家" width="180" />
+      <el-table-column prop="ModelDisplayName" label="型号" width="180" />
       <el-table-column prop="Version" label="版本" width="180" />
+      <el-table-column prop="Version" label="文件大小" width="180" />
       <el-table-column prop="Action" label="操作" />
     </el-table>
   </div>
