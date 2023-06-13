@@ -15,3 +15,11 @@ export function firmwareQueryByModelID(id) {
         method: 'get',
     })
 }
+
+export function createDownloadLink(id) {
+    return request({
+        url: `/download/firmware/` + id,
+        method: 'get',
+        responseType: 'blob',
+    })
+}
